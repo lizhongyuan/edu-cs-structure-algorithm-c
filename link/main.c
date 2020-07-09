@@ -19,11 +19,6 @@ int main(int argc, char** argv) {
   }
 
   insert(link_list, 1, 2);
-  /*
-  // test list length
-  int link_list_len = list_length(link_list);
-  printf("link list length: %d\n", link_list_len);
-   */
 
   show(link_list);
 

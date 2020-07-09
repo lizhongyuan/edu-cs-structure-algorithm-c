@@ -22,6 +22,8 @@ LinkNode* create_link_list_by_node(LinkNode* node) {
 
   link_list->head = node;
   link_list->length = 1;
+
+  return node;
 }
 
 
@@ -43,6 +45,9 @@ LinkNode* create_link_list_by_data(int data) {
 
   link_list->head = link_node;
   link_list->length = 1;
+
+  // return link_node;
+  return link_list;
 }
 
 
