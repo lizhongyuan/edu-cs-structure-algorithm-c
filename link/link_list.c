@@ -51,6 +51,39 @@ LinkNode* create_link_list_by_data(int data) {
 }
 
 
+LinkNode* reverseListRecur(LinkNode* head) {
+
+  if(head == NULL || head->next == NULL)
+    return head;
+
+  LinkNode* reverse = reverseListRecur(head->next);
+
+  head->next->next = head;
+  head->next = NULL;
+
+  return reverse;
+}
+
+
+LinkNode* reverseList(LinkNode* head) {
+
+  if(head == NULL || head->next == NULL)
+    return head;
+
+  LinkNode* reverseHead = NULL;
+  LinkNode* current = head;
+
+  while(current != NULL) {
+    LinkNode* temp = current;
+    current = current->next;
+    temp->next = reverseHead;
+    reverseHead = temp;
+  }
+
+  return reverseHead;
+}
+
+
 int list_length(LinkList* link_list) {
 
   if (link_list == NULL) {
@@ -58,6 +91,21 @@ int list_length(LinkList* link_list) {
   }
 
   return link_list->length;
+}
+
+
+int get_list_length(LinkList* link_list) {
+
+  LinkNode* head = link_list->head;
+  LinkNode* cur = head;
+
+  int len = 0;
+  while(cur != NULL) {
+    len++;
+    cur = cur->next;
+  }
+
+  return len;
 }
 
 

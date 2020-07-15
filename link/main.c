@@ -22,5 +22,7 @@ int main(int argc, char** argv) {
 
   show(link_list);
 
+  int len = get_list_length(link_list);
+
   return 0;
 }

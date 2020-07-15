@@ -22,6 +22,10 @@ LinkNode* create_link_list_by_data(int data);
 
 int list_length(LinkList* link_list);
 
+int get_list_length(LinkList* link_list);
+
+LinkNode* reverseListRecur(LinkNode* head);
+
 void show(LinkList* link_list);
 
 int insert(LinkList* link_list, int pos, int data);
